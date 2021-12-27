@@ -1,0 +1,2 @@
+# desss-kt
+knowledge-transfer
