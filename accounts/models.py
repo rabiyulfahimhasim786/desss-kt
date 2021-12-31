@@ -33,4 +33,3 @@ class Countries(models.Model):
 
 class Meta:
         ordering = ['Country_name']
-# Create your models here.

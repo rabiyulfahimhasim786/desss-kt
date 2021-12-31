@@ -10,12 +10,17 @@ from django.http import Http404
 from rest_framework.views import APIView
 from rest_framework import status
 
+from django.template.response   import TemplateResponse
+
 
 def new(request):
     return HttpResponse("Hello, world. You're at the accounts index.")
 
 def index(request):
     return render(request, './index.html')
+
+def main(request):
+    return render(request, './main.html')
 
 class CurrencyList(APIView):
     """
@@ -192,3 +197,4 @@ class TagDetail(APIView):
         snippet = self.get_object(pk)
         snippet.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+

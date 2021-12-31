@@ -5,8 +5,9 @@ from . import views
 urlpatterns = [
     path('new/', views.new, name='new'),
     path('', views.index, name='index'),
+    path('main/', views.main, name='main'),
     path('currencies/', views.CurrencyList.as_view()),
-    path('currenies/<int:pk>/', views.CurrencyDetail.as_view()),
+    path('currencies/<int:pk>/', views.CurrencyDetail.as_view()),
     path('countries/', views.CountryList.as_view()),
     path('countries/<int:pk>/', views.CountryDetail.as_view()),
     path('standards/', views.StandardList.as_view()),
