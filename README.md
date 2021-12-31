@@ -1,4 +1,32 @@
 # Developing Django on Repl.it
+Install requirements.txt 
+
+if it not done then manually inatall one by one 
+
+```
+-django
+-rest_framework  #commaned is pip install 
+-corsheaders #pip install django-cors-headers
+```
+
+Dont for got to add these below code in setting.py
+
+```
+AUTH_USER_MODEL = "accounts.MyUser"
+
+# Application definition
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'rest_framework',
+    'accounts',
+]
+```
 
 - Fork this template to get started
 - Simply hit run to start the server
